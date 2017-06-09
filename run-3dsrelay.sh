@@ -27,5 +27,6 @@ exec turnserver -v \
     --lt-cred-mech \
     --no-dtls \
     --no-tls \
+    --use-auth-secret \
     --psql-userdb "$1" \
     --realm $2
