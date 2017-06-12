@@ -28,5 +28,6 @@ exec turnserver -v \
     --no-dtls \
     --no-tls \
     --use-auth-secret \
+    --static-auth-secret=my_secret \
     --psql-userdb "$1" \
     --realm $2
