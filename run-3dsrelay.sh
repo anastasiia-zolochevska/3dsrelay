@@ -25,8 +25,8 @@ exec turnserver -v \
     -X "$externalIp" \
     -p 3478 \
     --lt-cred-mech \
-    --no-dtls \
-    --no-tls \
+    --cert "/etc/ssl/turn_server_cert.pem" \
+    --pkey "/etc/ssl/turn_server_pkey.pem" \
     --use-auth-secret \
     --psql-userdb "$1" \
     --realm $2
