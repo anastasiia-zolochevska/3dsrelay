@@ -16,6 +16,8 @@ internalIp="$(ip a | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0
 externalIp="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 echo External ip address: $externalIp
 echo Internal ip address: $internalIp
+openssl x509 -in /etc/ssl/18E1F24AAF85A6804ACC89FAC5DB9DFEFD30C034.crt -out /etc/ssl/turn_server_cert.pem
+mv /etc/ssl/18E1F24AAF85A6804ACC89FAC5DB9DFEFD30C034.prv /etc/ssl/turn_server_pkey.pem
 
 echo Starting turnserver
 exec turnserver -v \
