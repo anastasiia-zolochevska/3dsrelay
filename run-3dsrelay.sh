@@ -17,11 +17,6 @@ externalIp="$(dig +short myip.opendns.com @resolver1.opendns.com)"
 echo External ip address: $externalIp
 echo Internal ip address: $internalIp
 
-echo $1
-connectionString=${1:1:-1}
-echo $connectionString
-
-
 echo Starting turnserver
 exec turnserver -v \
     -n \
