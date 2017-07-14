@@ -1,6 +1,6 @@
-A Docker container with the [Coturn TURN server] (https://github.com/coturn/coturn)
+# A Docker image with the [Coturn TURN server] (https://github.com/coturn/coturn)
 
-Usage:
+## Usage
 
 1. Put certificate to /etc/ssl/certs/turn
 2. Create Postgres DB and add user or shared secret depending on authentication method: long term credentials (long_term_creds) or temporary passwords based on shared secret (shared_secret).
